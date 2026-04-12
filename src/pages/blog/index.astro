@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+---
+
+<BaseLayout
+  title="The CozyHouse Blog"
+  description="Browse all CozyHouse articles — room decorating guides, seasonal inspiration, budget tips, and honest product picks for your home."
+>
+  <!-- Header -->
+  <section class="bg-gradient-to-b from-beige/40 to-cream py-14 md:py-20 border-b border-beige">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-gold font-semibold text-xs uppercase tracking-widest mb-3">All Articles</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-dark mb-4">The CozyHouse Blog</h1>
+      <p class="text-dark/60 text-lg">
+        Decorating ideas, honest reviews, and seasonal inspiration — {sortedPosts.length} article{sortedPosts.length !== 1 ? 's' : ''} and counting.
+      </p>
+    </div>
+  </section>
+
+  <!-- Posts Grid -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    {sortedPosts.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sortedPosts.map(post => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.slug}
+            category={post.data.category}
+            pubDate={post.data.pubDate}
+            heroImage={post.data.heroImage}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-20">
+        <p class="text-dark/40 text-lg">No posts yet. Check back soon!</p>
+      </div>
+    )}
+  </section>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .filter(p => p.data.category === 'Seasonal')
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout
+  title="Seasonal Decor Ideas"
+  description="Seasonal home decorating inspiration for every time of year — spring tablescapes, holiday decor, summer refresh ideas, and cozy winter touches."
+>
+  <section class="bg-gradient-to-b from-rose-100 to-cream py-14 md:py-20 border-b border-beige">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <span class="text-4xl mb-4 block">🌸</span>
+      <p class="text-gold font-semibold text-xs uppercase tracking-widest mb-3">Category</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-dark mb-4">Seasonal</h1>
+      <p class="text-dark/60 text-lg">
+        Holiday tablescapes, seasonal styling, and decor ideas that make each season feel special.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    {posts.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map(post => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.slug}
+            category={post.data.category}
+            pubDate={post.data.pubDate}
+            heroImage={post.data.heroImage}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-20">
+        <p class="text-dark/40 text-lg">No seasonal posts yet. Check back soon!</p>
+        <a href="/blog" class="mt-4 inline-block text-gold font-semibold hover:text-dark transition-colors duration-200">Browse all posts</a>
+      </div>
+    )}
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-20">
+    <Newsletter />
+  </div>
+</BaseLayout>

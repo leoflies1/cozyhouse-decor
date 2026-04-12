@@ -1,0 +1,176 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  category: string;
+  tags?: string[];
+  author?: string;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  category,
+  tags = [],
+  author = 'CozyHouse Team',
+} = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const siteUrl = 'https://cozyhouse.vercel.app';
+const postUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: heroImage ? new URL(heroImage, siteUrl).toString() : undefined,
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'CozyHouse',
+    url: siteUrl,
+  },
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  url: postUrl,
+  keywords: tags.join(', '),
+};
+
+const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(postUrl)}`;
+const pinterestShareUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(postUrl)}&description=${encodeURIComponent(title)}`;
+---
+
+<BaseLayout title={title} description={description} image={heroImage} type="article" pubDate={pubDate} tags={tags}>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+    <!-- Hero Image -->
+    {heroImage && (
+      <div class="rounded-2xl overflow-hidden mb-8 shadow-md aspect-[16/9] bg-beige">
+        <img
+          src={heroImage}
+          alt={title}
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+    )}
+
+    <!-- Category Badge -->
+    <div class="mb-4">
+      <span class="inline-block bg-gold/10 text-gold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+        {category}
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-dark leading-tight mb-4">
+      {title}
+    </h1>
+
+    <!-- Meta row -->
+    <div class="flex flex-wrap items-center gap-4 text-sm text-dark/50 border-b border-beige pb-6 mb-8">
+      <span class="flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        {author}
+      </span>
+      <time datetime={pubDate.toISOString()} class="flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        {formattedDate}
+      </time>
+      {updatedDate && (
+        <span class="flex items-center gap-1.5 text-dark/40">
+          Updated: {updatedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+        </span>
+      )}
+    </div>
+
+    <!-- Article Content -->
+    <div class="prose prose-lg prose-stone max-w-none
+      prose-headings:font-serif prose-headings:text-dark
+      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+      prose-p:text-dark/80 prose-p:leading-relaxed
+      prose-a:text-gold prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-dark
+      prose-li:text-dark/80
+    ">
+      <slot />
+    </div>
+
+    <!-- Tags -->
+    {tags.length > 0 && (
+      <div class="mt-10 pt-6 border-t border-beige flex flex-wrap gap-2">
+        {tags.map(tag => (
+          <span class="text-xs bg-beige text-dark/60 px-3 py-1 rounded-full">#{tag}</span>
+        ))}
+      </div>
+    )}
+
+    <!-- Social Share -->
+    <div class="mt-8 p-6 bg-beige/50 rounded-2xl">
+      <p class="text-sm font-semibold text-dark mb-3">Share this article</p>
+      <div class="flex gap-3">
+        <a
+          href={twitterShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-dark text-white text-sm rounded-xl hover:bg-dark/80 transition-colors duration-200"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          Share on X
+        </a>
+        <a
+          href={pinterestShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600 text-white text-sm rounded-xl hover:bg-red-700 transition-colors duration-200"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+          </svg>
+          Pin it
+        </a>
+      </div>
+    </div>
+
+    <!-- Affiliate Disclaimer -->
+    <div id="affiliate" class="mt-8 p-5 bg-cream border border-beige rounded-xl text-xs text-dark/50 leading-relaxed">
+      <strong class="text-dark/70">Affiliate Disclosure:</strong> This post may contain affiliate links. If you purchase through these links, we may earn a small commission at no additional cost to you. We only recommend products we genuinely believe in and would use ourselves. Thank you for supporting CozyHouse!
+    </div>
+
+    <!-- Related Posts Placeholder -->
+    <div class="mt-12">
+      <h3 class="font-serif text-xl font-bold text-dark mb-6">More from CozyHouse</h3>
+      <a href="/blog" class="inline-flex items-center gap-2 text-gold font-semibold hover:text-dark transition-colors duration-200">
+        Browse all articles
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </article>
+</BaseLayout>

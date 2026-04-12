@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Newsletter from '../components/Newsletter.astro';
+---
+
+<BaseLayout
+  title="About CozyHouse"
+  description="Learn about CozyHouse — our story, our values, and our mission to help you create a home you truly love at any budget."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-beige/50 to-cream py-16 md:py-24 border-b border-beige">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Logo -->
+      <div class="flex justify-center mb-8">
+        <img
+          src="/logo.jpg"
+          alt="CozyHouse"
+          width="200"
+          height="67"
+          class="h-16 w-auto object-contain"
+          loading="eager"
+        />
+      </div>
+      <p class="text-gold font-semibold text-xs uppercase tracking-widest mb-4">Our Story</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-dark mb-6">
+        We Believe Every Home<br />Deserves to Feel Beautiful
+      </h1>
+      <p class="text-dark/60 text-lg leading-relaxed">
+        CozyHouse is a home decor blog and resource hub dedicated to helping you create a space you genuinely love — whether you have a generous renovation budget or a few dollars and a lot of creativity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+
+    <!-- The Story -->
+    <section>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-dark mb-6">How CozyHouse Started</h2>
+      <div class="prose prose-stone prose-lg max-w-none prose-p:text-dark/70 prose-p:leading-relaxed">
+        <p>
+          CozyHouse started as a personal project during a period of nesting — moving into a new apartment with high decorating ambitions and a very modest budget. What began as a way to document the process of making a bare, blank space feel like home quickly became something bigger: a resource for other people navigating the same challenge.
+        </p>
+        <p>
+          The home decor space online is filled with gorgeous imagery, but practical, honest guidance about what actually works — what products live up to their promises, which trends are worth investing in, how to get the look for less — can be surprisingly hard to find. CozyHouse exists to fill that gap.
+        </p>
+        <p>
+          We test products in real homes, research trends with a critical eye, and share what we genuinely find beautiful and useful. We are not here to sell you on an aspirational lifestyle that requires a complete overhaul. We are here to help you love the home you have right now, while working toward the home you are building.
+        </p>
+      </div>
+    </section>
+
+    <!-- What We Cover -->
+    <section>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-dark mb-6">What You Will Find Here</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          {
+            icon: '🛋️',
+            title: 'Room Decorating Guides',
+            desc: 'Living room, bedroom, bathroom, kitchen — complete room-by-room inspiration with actionable ideas.',
+          },
+          {
+            icon: '💰',
+            title: 'Budget-Friendly Ideas',
+            desc: 'Beautiful decorating on every budget. We love a good find, a clever DIY, and a well-timed sale.',
+          },
+          {
+            icon: '🌸',
+            title: 'Seasonal Decor',
+            desc: 'Spring tablescapes to cozy winter vignettes — seasonal inspiration that reflects how you actually live.',
+          },
+          {
+            icon: '⭐',
+            title: 'Honest Product Reviews',
+            desc: 'We share real opinions on decor products, including what disappointed us. Your trust matters more than a commission.',
+          },
+        ].map(item => (
+          <div class="flex gap-4 p-5 bg-cream rounded-2xl border border-beige">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-dark mb-1 text-sm">{item.title}</h3>
+              <p class="text-dark/60 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-dark mb-6">Our Values</h2>
+      <div class="space-y-4 prose prose-stone max-w-none prose-p:text-dark/70 prose-p:leading-relaxed">
+        <p>
+          <strong class="text-dark">Honesty first.</strong> We only recommend products we would genuinely use ourselves. When something doesn't live up to expectations, we say so. A trusted recommendation is worth more than any affiliate commission.
+        </p>
+        <p>
+          <strong class="text-dark">Accessibility matters.</strong> Beautiful spaces should not be exclusively for people with large budgets. We actively seek out budget-friendly alternatives, thrift store finds, and DIY solutions alongside premium picks.
+        </p>
+        <p>
+          <strong class="text-dark">Real homes, real people.</strong> We are not styling for photo shoots. We are decorating for people who actually live in their spaces — with pets, kids, remote work setups, and full lives.
+        </p>
+        <p>
+          <strong class="text-dark">Sustainability when possible.</strong> We prefer secondhand, durable, and sustainably made options whenever they exist. Fast decor trends and disposable furniture are not our thing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Affiliate Disclosure -->
+    <section id="affiliate" class="bg-beige/50 rounded-2xl p-8 border border-beige">
+      <h2 class="font-serif text-xl font-bold text-dark mb-4">Affiliate Disclosure</h2>
+      <p class="text-dark/60 text-sm leading-relaxed">
+        CozyHouse participates in affiliate marketing programs. This means that some of the links on this site are affiliate links, and if you click on them and make a purchase, we may receive a small commission — at no additional cost to you. These commissions help us keep CozyHouse running and allow us to continue creating content. We only link to products and services that we genuinely recommend and believe in. Our editorial opinions are never influenced by affiliate arrangements.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="text-center">
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-dark mb-4">Get in Touch</h2>
+      <p class="text-dark/60 mb-6 leading-relaxed">
+        Have a question, a collaboration proposal, or just want to say hello? We would love to hear from you.
+      </p>
+      <a
+        href="mailto:hello@cozyhouse.vercel.app"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-gold text-white font-semibold rounded-xl hover:bg-dark transition-colors duration-200 text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        hello@cozyhouse.vercel.app
+      </a>
+    </section>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 pb-20">
+    <Newsletter />
+  </section>
+</BaseLayout>

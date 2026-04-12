@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogCard from '../components/BlogCard.astro';
+import CategoryGrid from '../components/CategoryGrid.astro';
+import Newsletter from '../components/Newsletter.astro';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 6);
+---
+
+<BaseLayout
+  title="CozyHouse — Beautiful Home Decor Inspiration"
+  description="Discover cozy home decor ideas, room makeovers, and budget-friendly decorating tips for every room in your home."
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-cream via-beige/40 to-cream">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-20 left-10 w-64 h-64 rounded-full bg-gold blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cozy-green blur-3xl"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
+      <p class="text-gold font-semibold text-sm uppercase tracking-widest mb-4">Welcome to CozyHouse</p>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-dark leading-tight mb-6">
+        Your Home,<br class="hidden sm:block" />
+        <em class="text-gold not-italic">Reimagined</em>
+      </h1>
+      <p class="text-dark/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+        Beautiful decor ideas, honest product picks, and practical inspiration for creating a home you truly love — at every budget.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/categories/living-room"
+          class="px-8 py-4 bg-gold text-white font-semibold rounded-xl hover:bg-dark transition-colors duration-200 text-sm"
+        >
+          Browse Categories
+        </a>
+        <a
+          href="/blog"
+          class="px-8 py-4 bg-white text-dark font-semibold rounded-xl border border-beige hover:border-gold hover:text-gold transition-all duration-200 text-sm"
+        >
+          Read the Blog
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <p class="text-gold font-semibold text-xs uppercase tracking-widest mb-2">Fresh Reads</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-dark">Latest from the Blog</h2>
+      </div>
+      <a
+        href="/blog"
+        class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-gold hover:text-dark transition-colors duration-200"
+      >
+        View all posts
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sortedPosts.map(post => (
+        <BlogCard
+          title={post.data.title}
+          description={post.data.description}
+          slug={post.slug}
+          category={post.data.category}
+          pubDate={post.data.pubDate}
+          heroImage={post.data.heroImage}
+        />
+      ))}
+    </div>
+
+    <div class="mt-8 text-center sm:hidden">
+      <a href="/blog" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-dark transition-colors duration-200">
+        View all posts
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-gold font-semibold text-xs uppercase tracking-widest mb-2">Explore by Room</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-dark">Shop by Category</h2>
+      </div>
+      <CategoryGrid />
+    </div>
+  </section>
+
+  <!-- About Snippet -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <p class="text-gold font-semibold text-xs uppercase tracking-widest mb-4">Our Story</p>
+    <h2 class="font-serif text-3xl md:text-4xl font-bold text-dark mb-6">Welcome to CozyHouse</h2>
+    <p class="text-dark/60 text-lg leading-relaxed mb-4">
+      CozyHouse was born from a simple belief: every home deserves to feel beautiful, and beautiful doesn't have to mean expensive. We share honest, real-world decorating advice for people who love their homes and want to make them even better.
+    </p>
+    <p class="text-dark/60 text-base leading-relaxed mb-8">
+      From seasonal decor to budget room makeovers, we test products, curate ideas, and share what actually works — so you can spend less time scrolling and more time enjoying your space.
+    </p>
+    <a
+      href="/about"
+      class="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold font-semibold rounded-xl hover:bg-gold hover:text-white transition-all duration-200 text-sm"
+    >
+      Read Our Story
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <Newsletter />
+  </section>
+</BaseLayout>

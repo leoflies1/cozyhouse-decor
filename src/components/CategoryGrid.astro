@@ -1,0 +1,62 @@
+---
+const categories = [
+  {
+    icon: '🛋️',
+    name: 'Living Room',
+    href: '/categories/living-room',
+    description: 'Sofas, rugs, lighting & more',
+    color: 'from-cozy-green/10 to-cozy-green/5',
+    border: 'border-cozy-green/20',
+    hover: 'hover:border-cozy-green/50',
+  },
+  {
+    icon: '🛏️',
+    name: 'Bedroom',
+    href: '/categories/bedroom',
+    description: 'Bedding, nightstands & calm retreats',
+    color: 'from-gold/10 to-gold/5',
+    border: 'border-gold/20',
+    hover: 'hover:border-gold/50',
+  },
+  {
+    icon: '🛁',
+    name: 'Bathroom',
+    href: '/categories/bathroom',
+    description: 'Spa vibes, storage & refresh ideas',
+    color: 'from-blue-100 to-blue-50',
+    border: 'border-blue-200',
+    hover: 'hover:border-blue-400',
+  },
+  {
+    icon: '🌸',
+    name: 'Seasonal',
+    href: '/categories/seasonal',
+    description: 'Holiday & seasonal decor inspo',
+    color: 'from-rose-100 to-rose-50',
+    border: 'border-rose-200',
+    hover: 'hover:border-rose-400',
+  },
+  {
+    icon: '💡',
+    name: 'Tips & DIY',
+    href: '/categories/tips',
+    description: 'Budget tricks, hacks & DIY guides',
+    color: 'from-amber-100 to-amber-50',
+    border: 'border-amber-200',
+    hover: 'hover:border-amber-400',
+  },
+];
+---
+
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+  {categories.map(cat => (
+    <a
+      href={cat.href}
+      class={`group flex flex-col items-center text-center p-6 rounded-2xl bg-gradient-to-b ${cat.color} border ${cat.border} ${cat.hover} transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
+    >
+      <span class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-200">{cat.icon}</span>
+      <h3 class="font-serif font-semibold text-dark text-sm leading-tight mb-1">{cat.name}</h3>
+      <p class="text-xs text-dark/50 hidden sm:block">{cat.description}</p>
+    </a>
+  ))}
+</div>
