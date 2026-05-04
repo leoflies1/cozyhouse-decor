@@ -22,8 +22,7 @@ The 6x9 size is the sweet spot for a standard living room: big enough to anchor 
 [![A natural undyed jute area rug on a light wood floor, neutral linen sofa above it, navy throw pillows visible, coastal living room with morning light, editorial interior photography](/images/blog/summer-coastal-1.jpg)](https://www.amazon.com/dp/B08X4FKMST/?tag=cozyhouse0a21-20)
 
 ### 🛒 Shop the Look
-- [nuLOOM Natural Jute Area Rug, 6x9 — $85-120](https://www.amazon.com/dp/B08X4FKMST/?tag=cozyhouse0a21-20) — Handwoven, 100% jute, braided edge. The foundation of every coastal living room.
-- [SAFAVIEH Natural Fiber Seagrass Rug, 6x9 — $90-130](https://www.amazon.com/dp/B07NQKXFHG/?tag=cozyhouse0a21-20) — Tight woven seagrass with cotton border. More structured than jute, still natural.
+- [nuLOOM Natural Jute Area Rug, 6x9 — $85-120](https://www.amazon.com/dp/B07NQKXFHG/?tag=cozyhouse0a21-20) — Tight woven natural seagrass, 6x9, with cotton border. The foundation of every coastal living room.
 
 ---
 
