@@ -67,7 +67,7 @@ A basket this size also solves the throw blanket storage problem — you can kee
 
 ### 🛒 Shop the Look
 - [Natural Seagrass Storage Basket with Handles — Large — $28-35](https://www.amazon.com/dp/B08R6RJ4K7/?tag=cozyhouse0a21-20) — 14x14x14, braided handles, natural seagrass. Perfect for throws or magazines.
-- [Woven Rattan Storage Basket — Large, Set of 2 — $32-40](https://www.amazon.com/dp/B0B5HRTQPV/?tag=cozyhouse0a21-20) — Comes in a set — use one for blankets, one for plant pot or logs.
+- [Woven Rattan Storage Basket — Large, Set of 2 — $32-40](https://www.amazon.com/s?k=woven+rattan+storage+basket+large+set+of+2&tag=cozyhouse0a21-20) — Comes in a set — use one for blankets, one for plant pot or logs.
 
 ---
 
@@ -79,11 +79,10 @@ A set of three coordinating prints creates a gallery wall that feels intentional
 
 Position them at eye level, 3-4 inches apart. A set of three 11x14 prints works for most standard sofas.
 
-[![Three coastal abstract art prints in navy, cream and sand tones framed in white, arranged above a cream sofa with navy pillows, coastal living room, editorial interior](/images/blog/summer-coastal-5.jpg)](https://www.amazon.com/dp/B09Q3XNLW8/?tag=cozyhouse0a21-20)
+[![Three coastal abstract art prints in navy, cream and sand tones framed in white, arranged above a cream sofa with navy pillows, coastal living room, editorial interior](/images/blog/summer-coastal-5.jpg)](https://www.amazon.com/s?k=coastal+wall+art+set+of+3+navy+cream&tag=cozyhouse0a21-20)
 
 ### 🛒 Shop the Look
-- [Beach Coastal Wall Art Prints — Set of 3, Unframed 8x10 — $15](https://www.amazon.com/dp/B09Q3XNLW8/?tag=cozyhouse0a21-20) — Abstract coastal designs, printed on matte paper. Buy frames separately.
-- [Home Evolution Coastal Canvas Wall Art — Set of 3, 13x19 — $22-28](https://www.amazon.com/dp/B0B92LKBB9/?tag=cozyhouse0a21-20) — Gallery-wrapped canvas, ready to hang. Comes with hanging hardware included.
+- [Coastal Wall Art Prints — Set of 3, Unframed 8x10 — $15-25](https://www.amazon.com/s?k=coastal+wall+art+set+of+3+navy+cream&tag=cozyhouse0a21-20) — Abstract coastal designs in navy, cream, and sand tones.
 
 ---
 
@@ -99,7 +98,7 @@ The total cost for two vases and dried stems: under $30. The visual impact: look
 
 ### 🛒 Shop the Look
 - [DII Ceramic Vase Set — White, 3-Piece — $22-28](https://www.amazon.com/dp/B08FMNXX6F/?tag=cozyhouse0a21-20) — Matte ceramic, three sizes (6", 8", 10"), fits any dried stem.
-- [CWL Dried Pampas Grass Decor — 20 Stems, Natural — $15-20](https://www.amazon.com/dp/B0BFZYKQRV/?tag=cozyhouse0a21-20) — Fluffy pampas mix with bunny tails and reeds. No maintenance required.
+- [Dried Pampas Grass Decor — 20 Stems, Natural — $15-20](https://www.amazon.com/s?k=dried+pampas+grass+stems+natural+20&tag=cozyhouse0a21-20) — Fluffy pampas mix with bunny tails and reeds. No maintenance required.
 
 ---
 
