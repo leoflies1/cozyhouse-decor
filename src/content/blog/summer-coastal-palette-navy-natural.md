@@ -32,11 +32,10 @@ Navy is the color that makes coastal work. It's the contrast against all that cr
 
 The trick is to layer them: two navy linen covers on the sofa, mixed with one cream chunky knit and one textured beige. The mix of colors plus textures creates that styled-by-a-designer look without any actual skill required. And at under $20 for two covers, it's impossible to get wrong.
 
-[![Navy blue linen throw pillows layered on a cream sofa with a chunky knit beige pillow, natural light, coastal neutral living room, editorial lifestyle photography](/images/blog/summer-coastal-2.jpg)](https://www.amazon.com/dp/B09W2YTHFM/?tag=cozyhouse0a21-20)
+[![Navy blue linen throw pillows layered on a cream sofa with a chunky knit beige pillow, natural light, coastal neutral living room, editorial lifestyle photography](/images/blog/summer-coastal-2.jpg)](https://www.amazon.com/s?k=navy+linen+throw+pillow+covers+18x18&tag=cozyhouse0a21-20)
 
 ### 🛒 Shop the Look
-- [Utopia Bedding Linen Pillow Covers 18x18 — Navy, Set of 2 — $18](https://www.amazon.com/dp/B09W2YTHFM/?tag=cozyhouse0a21-20) — Envelope closure, washed linen texture. Deep navy that holds up to washing.
-- [BEDELITE Linen Throw Pillow Covers 18x18 — Navy, Set of 2 — $16](https://www.amazon.com/dp/B0C8CDJSGB/?tag=cozyhouse0a21-20) — Soft washed linen, hidden zipper, 30+ colors available if you want to experiment.
+- [Navy Linen Pillow Covers 18x18 — Set of 2 — $16-20](https://www.amazon.com/s?k=navy+linen+pillow+covers+18x18&tag=cozyhouse0a21-20) — Envelope closure, washed linen texture. Deep navy that holds up to washing.
 
 ---
 
