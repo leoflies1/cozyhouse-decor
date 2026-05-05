@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { SITE_URL } from '../config';
 
 interface Props {
   title: string;
@@ -29,7 +30,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
-const siteUrl = 'https://cozyhouse.vercel.app';
+const siteUrl = SITE_URL;
 const postUrl = new URL(Astro.url.pathname, siteUrl).toString();
 
 const jsonLd = {

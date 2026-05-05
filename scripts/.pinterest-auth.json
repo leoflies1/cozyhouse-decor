@@ -1,0 +1,133 @@
+{
+  "cookies": [
+    {
+      "name": "_GRECAPTCHA",
+      "value": "09AKhCRwgyVPLcWlHR2XFspDHAsm-BZ0Z2RW4HnCfkEQ2dxtt0lFo5IZlQl6Na3fdo6TWfcLQFKRriBT-bAnfKULU",
+      "domain": "www.recaptcha.net",
+      "path": "/recaptcha",
+      "expires": 1792775915.254396,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "csrftoken",
+      "value": "b4a0773e912e8cc1efff0d9eeff0278e",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1808759904.476829,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_routing_id",
+      "value": "\"357a00d7-a003-4d18-b7b0-895ce9b867f1\"",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1777310305.479351,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1777223906906,\"i_b\":\"8PQYtKdlsU+erJ9k/PK3i9aIZ73fpvE/wyciBZlAiUw\",\"i_e\":{\"enable_itp_optimization\":22},\"i_et\":1777223906748}",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1792775906,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_b",
+      "value": "\"AZO9GQQNPGVPGaJ7Ua6QaXRUey9yH3/TjXtm/vIjY9TADC4mTlWs47sacfKOCF1RKzU=\"",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1811783912.337973,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_auth",
+      "value": "1",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1808327918.199525,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_pinterest_sess",
+      "value": "TWc9PSZlaEhSeFpEcDFwb2xiaEdTK1R1TkdGL3BKa29zVFFOSTZMNTdwd3ZvRlh6TVlEYXZLR25iK0dpRzVFM1diczg4VmhuaDJMMVQ3N3RZMSttWnQzcGJwYTgzb0hubjFwOFI4Yk9iV0xkUlNZaU1rM04yampmTGNWYlpMV1l0bTJoOUJWU2hnY3J4OHN1RExhc3dYYzNDK2RVa21BMVQ5emszVVNLby9BRmFGRkt2ZmV4RGpHNmswb0ZjVmszTFphL2JFN3B5V1B5MUpjRnhUZjd0OHExajE5UGxjZ2h1NllIdWRPeG5MTkROdXlqVTdlUmVsdnZORHNaS2xnRWRyVkFBc3NtMnJVdlE1Y3ZZMlUrMzcxQUFLaUZ4Wk1pRUtCbFVnOGtIYXZja2dHZlhsQkZQc0lOUWtCRVVyVU01WkV5S3JRb1NMczl4TmNBbG5zRTFYejF0cG04bFlMaVVITk0va0JwTmt6Z3VFeDhYY2hYeXlyUXNhWkxBYWIzWWlWeXl0UlNuVmtpOHg2WXBjdEZEeDhJamFXTlFtNG5adU44RVI3WmRva05UbXorL3hvTHRpT0hNVVNZRzlabzU4c0srWHNKYVZ6OEozdEpDQkRvYnZUNlRxNnZYUU9ENGRRNVBzUlhtY0ZaZUlqQ2tJcXdHZVh1aVNHMERGR2FKS3Y0aHA4MUgwZU9HWE4vVWFJUTBHMlNST3RSVUNBWjFWTkFWSmY1eXlXR2ZjWUljMEVYdm44NEp0YWtVcFlqVzY1VTRCU3J0TDYzWUFrOUFRVzF4ejE1MVBBTkdpWmtxR296SGdoTDRJRTVjMm5NNC8reWV6OTg4ZUhBUm42eWRvTEFMcHVZUGFhYjhMTXd3dHZmQm9VR3NiekpoSDdzOHpOYkF3SGFHYjArZUtzTyt5S3VoVzdlRCthblJUa2RMSzRxQ1oxVUtGMFZ2ZUhseGk3ZGRjZTNQZTZ4V0EwM3oxQTlXR05hYXpZaTAvdjN2dHJnbzFuN05oRjhvYjg2OXJQWlppbWYwVkxLM1gwU1RhYmEzTDd2NWhQcDg3bytVTHB4b3dwUUN0K1hxVDE0ZXljdTV5S1hMRWpEOVdZZk5MdnprZzBtdFVpdGZqbTVOWnhIejZMd1hhcUl0cVd3MHhmWTcrOVU1YmNiK3FUYlJXU1NPSDFpaXp2Z1k3VHZvdThYQ0VCVXZsVVlzcnVKYkxteWt2NU1mTGJvVFBRRWFzekdqRjhVQUNEam5jOFB6emxHMzdyVlBkbXVZRk02TXd5YlUwMTBFdTltMTljTi9JS3lkZ3BVQWxWbUlOM3lvVlJmbmMybGpvWU10eU1mMnozZGp3NjMxZEJUemRzQkdwY01VTEZDTk1wNEc1amtmL3FPSnZONUN2NDJTbnVncFNQdXF6bEJuZXp6eEltMFhQeEhxQ3hCWUE3NVQzWmE0MmtPemtuWWROeDhnNytSNFU0eVNZQ2I4TlloL3RxNTczVllWeVRDOTBCc20rVUdYc0VzTExUeVFhZDZXandQYnlsUmlaakVVcFBXYUd0WGQ3ZlRKNmw4QWtCcWFyQUlTU0lBdFdFT3dBOUpJeU1Qa2VFUk5iRkZyWVZXTVJsODNRazJMZ000eTZDc3kzTTNrU1JQQ2ZmSlZ2ellxeExLOVhkM0ErMlRxL2d1UHJFRVd5WDQ3REk1ZFE0eWR6ZTg3ZDZCeko0YmRVejZHa3IxRUdWdHRZYnlaNU1SOHBSVzBuZ0Nzam5lZ0hycUZxbFRjZ05Cdy9FTEMrY2pvYUJUYWR3NXImYTdJQTVlYmIwM2tRK0JBQ3ZhL0cxNDlpcjdJPQ==",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1808327918.199792,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-s_a",
+      "value": "eU5xY1ZqNXJoR2VGd1BTUFFEaTF5cnJ3cTV0SkloTGhNOGNRMnBSUUw3L0h1RXMwTC9xQkJqcFgzL1RaVnNNQ1BiRGNPZ1VsS3dKREtuTGVpVk56bElOa01kd3cybzE2M2pJbmhHQXlZM1pheHYrc2svU1UxbGRaVW1vcGMvT2pjU0MxVnc5UDZjUVY5U1ZsVXl6enM3SVBPeGRjanZRRm5hazQ2WjF6VmdtbHVUSFAvU0l1NkJmSC93TWhjNGFPdFBVZGtjUVhYMncraGRoVVg5QjZLb3NNM1NEeU0vdlljN09JMkVtN0w0UXppaFFKQi9vM2kxekhxL1RPNUk3NzlUdkFRYlZweUlYMUdCdjc4N2FnN3JyRDkvUzVwYlRtajFvUVlCbWxNdWFEUFpmaWxaZDllWTQ3YTFjdnlVVXJ0Sk00NjNZR0xweVlBSmU0YmRTeElQWmtYcHVYSFl3SE9DdDlLdFFwKzY1TStsSlV4ZzRvdnl0S3luc2xSenNPRG1ITW50dmV3aHFzQXBaTGdGMXlSNmdYTkNiOExNYTRXMUVJUzZibDNNRVE1NkFUajdPd3hqWmFXZlE0VlhhQXZtYTBEUkkwY0xxUW5NTlQ4TW5VcU53a3AzWXZreDErb1VHdDloYTJsM3dGY3JIUm41Um4zNWJlOTkwd1FVb3Q1aGdIU2lRaUNySGJpYk1uMmFVVFNST3EzdHZWRGI4Q2x3YThnSmI1eHAzcVVlYUR2ZXYxb1JpYTZORGFIWDMwVjNlZkt1dUY5WVFsQkhxMVhvTWFaWGtoNUs2d2xoR2szWko4bTY3KzBsdFRjckcrOHVyd0J3VW9tdk9ZVitMS20xaDViYVFpRk9JcDhGQ2ZpcnlBZ2dHWDRKQmpKSEE2c3ZWM0sxTVFqRUFRU0tnbTNjdDRTS0Rsb1JUZzljeEJYNjRyd2tZMHBFS1JHVExlUTZQU20rQ1d4OEhBSXEyR08zd2loOEJFNE1WRzlRcHhYSlVUNEhtVnY0R0pHT2lNZWtiSjlIT0xPMmdlK0wyMXF4eHN3NnVzUkVTRE03d3pGbVA4Sy9nN1Jzd09VVml3cGh3MkFZcnlIcHFBdzI5ODZlblFrbVVXTnhrTlBOWXJuZWhqWVY5Mi9BdVNtTStpMFVXbFBhWmQ0Q3JEYktxeTQ5RHdPRFVSeG5MVzdKQTZ5dExnNlRjbmJDQjlEUXF5b1NFSUlkSm1PeUpEcWdacWkrWm41VWRXQVpqZCtiOVNhMjBnSCtwVElNSHVjeEpXZmNhMis2Ymd3SXhJdWt4aEhvQ215MUNlMytpSk1mTnF2Y2xwUlpET3owbz0mbjRIR24rcXphWGxtczdDaW8vWHFIb3FoWlpjPQ==",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1808327918.199979,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "csrftoken",
+      "value": "d3200216f75d680e63229e513c80944d",
+      "domain": "it.pinterest.com",
+      "path": "/",
+      "expires": 1808759918.599103,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_routing_id",
+      "value": "\"b1000678-bfc1-4444-8a01-667964b96616\"",
+      "domain": "it.pinterest.com",
+      "path": "/",
+      "expires": 1777310318.599309,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ir",
+      "value": "0",
+      "domain": "api.pinterest.com",
+      "path": "/",
+      "expires": 1777225721.41896,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1777223921633,\"i_b\":\"JfQOi4gflYnb40AIshFiMBgfWmXALJ6J85VB5RV+Spw\",\"i_e\":{\"enable_itp_optimization\":0},\"i_et\":1777223921633}",
+      "domain": "it.pinterest.com",
+      "path": "/",
+      "expires": 1792775921,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "storage": {
+    "localStorage": {
+      "intentHistory": "[\"\"]",
+      "MULTIPLE_ACCOUNTS": "{\"1110911570491568239\":{\"id\":\"1110911570491568239\",\"username\":\"homedecor1ideas\",\"email\":\"leoflies.01@gmail.com\",\"fullName\":\"CozyHouse Decor |interior design Ideas|\",\"imageMediumUrl\":\"https://i.pinimg.com/75x75_RS/41/79/dd/4179dd5d16717b4227acde71fbad3b69.jpg\",\"imageLargeUrl\":\"https://i.pinimg.com/140x140_RS/41/79/dd/4179dd5d16717b4227acde71fbad3b69.jpg\"}}"
+    }
+  },
+  "url": "https://it.pinterest.com/business/hub/",
+  "email": "leoflies.01@gmail.com",
+  "timestamp": "2026-04-26T17:18:43.050Z"
+}
